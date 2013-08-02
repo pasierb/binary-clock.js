@@ -1,0 +1,43 @@
+.binary-clock > div {
+  float: left;
+  margin: 10px;
+}
+.binary-clock > div > div {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background: #eee;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px;
+  moz-box-shadow: 2px 2px 5px;
+}
+
+.binary-clock .set {
+  background: #333;
+  -webkit-animation: flash 0.7s;
+  -moz-animation: flash 0.7s;
+  -ms-animation: flash 0.7s;
+  -o-animation: flash 0.7s;
+  animation: flash 0.7s;
+}
+
+@-webkit-keyframes flash {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes flash {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes flash {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-o-keyframes flash {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@keyframes flash {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
