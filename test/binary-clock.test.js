@@ -1,11 +1,14 @@
-var clock;
+var clock, container;
 
 module("toBinary", {
   setup: function () {
-    clock = new BinaryClock();
+    container = document.createElement("div");
+    document.body.appendChild(container);
+    clock = new BinaryClock(container);
   },
   teardown: function () {
     clock.stop();
+    document.body.removeChild(container);
   }
 })
 
