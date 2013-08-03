@@ -1,6 +1,28 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-shadow: 1px 1px 1px #888;
+  background: #E0C61B;
+  padding: 10px;
+  color: #212121;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  margin: 40px 0;
+}
+
+#binary-clock-container {
+  width: 550px;
+  margin: 20px auto;
+  text-align: center;
+}
+
 .binary-clock > div {
-  float: left;
   margin: 10px;
+  display: inline-block;
+
 }
 .binary-clock > div > div {
   width: 40px;
