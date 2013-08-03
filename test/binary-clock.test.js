@@ -27,3 +27,51 @@ test("4", function () {
 test("8", function () {
   deepEqual(clock.toBinary(8,4), "1000");
 });
+
+module("create", {
+  setup: function () {
+    container = document.createElement("div");
+    document.body.appendChild(container);
+    clock = new BinaryClock(container,{
+      sections: ["hours", "minutes", "seconds"]
+    });
+  },
+  teardown: function () {
+    clock.stop();
+    document.body.removeChild(container);
+  }
+});
+
+test("main sections", function () {
+  equal(container.childNodes.length, 6);
+});
+
+test("hours-tens section", function () {
+  equal(container.childNodes[0].className, "hours-tens");
+});
+
+test("hours-units section", function () {
+  equal(container.childNodes[1].className, "hours-units");
+});
+
+test("minutes-tens section", function () {
+  equal(container.childNodes[2].className, "minutes-tens");
+});
+
+test("minutes-units section", function () {
+  equal(container.childNodes[3].className, "minutes-units");
+});
+
+test("seconds-tens section", function () {
+  equal(container.childNodes[4].className, "seconds-tens");
+});
+
+test("seconds-units section", function () {
+  equal(container.childNodes[5].className, "seconds-units");
+});
+
+test("main sections itms", function () {
+  for (var i=0; i<6; i++) {
+    equal(container.childNodes[i].childNodes.length, 4);
+  }
+});
