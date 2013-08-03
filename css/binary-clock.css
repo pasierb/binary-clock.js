@@ -13,6 +13,12 @@ h1 {
   margin: 40px 0;
 }
 
+div.tip {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
 #binary-clock-container {
   width: 550px;
   margin: 20px auto;
@@ -32,6 +38,21 @@ h1 {
   border-radius: 50%;
   box-shadow: 2px 2px 5px;
   moz-box-shadow: 2px 2px 5px;
+}
+
+.binary-clock > div > div.info {
+  background: none;
+  display: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  moz-box-shadow: 0 0 0;
+  color: #fff;
+  font-size: 25px;
+}
+
+.binary-clock:hover > div > div.info {
+  display: block;
 }
 
 .binary-clock .set {
