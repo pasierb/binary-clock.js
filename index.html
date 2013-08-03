@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=utf-8>
+    <title>A simple HTML5 page layout</title>
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./css/binary-clock.css" />
+  </head>
+  <body>
+    <h1>Excuse me, what time is it?</h1>
+    <div id="binary-clock-container"></div>
+
+    <script src="./js/binary-clock.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      (function () {
+        var clock = new BinaryClock(document.getElementById("binary-clock-container"));
+      })();
+    </script>
+  </body>
+</html>
