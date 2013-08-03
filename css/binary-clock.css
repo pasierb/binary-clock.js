@@ -34,6 +34,21 @@ h1 {
   moz-box-shadow: 2px 2px 5px;
 }
 
+.binary-clock > div > div.info {
+  background: none;
+  display: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  moz-box-shadow: 0 0 0;
+  color: #fff;
+  font-size: 25px;
+}
+
+.binary-clock:hover > div > div.info {
+  display: block;
+}
+
 .binary-clock .set {
   background: #333;
   -webkit-animation: flash 0.7s;
@@ -62,4 +77,14 @@ h1 {
 @keyframes flash {
   0% { opacity: 0.4; }
   100% { opacity: 1; }
+}
+@-webkit-keyframes drop {
+  0% {
+    opacity: 0.1;
+    margin-top: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
 }

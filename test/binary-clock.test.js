@@ -70,8 +70,35 @@ test("seconds-units section", function () {
   equal(container.childNodes[5].className, "seconds-units");
 });
 
-test("main sections itms", function () {
+test("main sections itmes", function () {
   for (var i=0; i<6; i++) {
     equal(container.childNodes[i].childNodes.length, 4);
+  }
+});
+
+module("hover info", {
+  setup: function () {
+    container = document.createElement("div");
+    document.body.appendChild(container);
+    clock = new BinaryClock(container,{
+      sections: ["hours", "minutes", "seconds"],
+      hoverInfo: true
+    });
+  },
+  teardown: function () {
+    clock.stop();
+    document.body.removeChild(container);
+  }
+});
+
+test("main sections items", function () {
+  for (var i=0; i<6; i++) {
+    equal(container.childNodes[i].childNodes.length, 5);
+  }
+});
+
+test("main sections info item", function () {
+  for (var i=0; i<6; i++) {
+    equal(container.childNodes[i].childNodes[4].className, "info");
   }
 });
